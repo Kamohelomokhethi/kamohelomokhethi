@@ -802,7 +802,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--active-cl);
+  color: var(--color-white);
   background: var(--color-black);
 }
 
