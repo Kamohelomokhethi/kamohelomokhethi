@@ -14,6 +14,8 @@ toggleBtn.onclick = function() {
 // Event listeners for showing and hiding the tooltip
 socialIcons.forEach((icon) => {
     icon.addEventListener('mouseenter', (event) => {
+
+        if(tooltip){
         // Get the website name from the icon's ID
         const websiteName = event.target.id;
         // Set the tooltip content and position it at the bottom of the mouse
@@ -21,6 +23,7 @@ socialIcons.forEach((icon) => {
         tooltip.style.display = 'block';
         tooltip.style.left = event.clientX + 'px';
         tooltip.style.top = event.clientY + 20 + 'px';
+        }
     });
 
     icon.addEventListener('mouseleave', () => {
