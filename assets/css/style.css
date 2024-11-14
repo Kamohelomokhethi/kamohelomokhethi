@@ -163,7 +163,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   color: #eee;
-  padding: 0.5rem;
+  padding: 0.5rem; 
   border-radius: 5px;
   font-size: 14px;
   pointer-events: none;
