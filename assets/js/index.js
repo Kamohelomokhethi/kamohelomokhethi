@@ -41,26 +41,26 @@ labels.forEach(label => {
 });
 
 
-// Create a new IntersectionObserver with a callback function and threshold option
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        // Check if the element is in the viewport with the specified threshold
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show'); // Add the 'show' class
-        } else {
-            entry.target.classList.remove('show'); // Remove the 'show' class
-        }
-    });
-});
-
-
-// Select all elements with the 'hidden' class
-const hiddenElements = document.querySelectorAll('.hidden');
-
-// Set each hidden element to be observed by the IntersectionObserver
-hiddenElements.forEach((el) => observer.observe(el));
-
-// const elements = document.querySelectorAll(".lang");
-// elements.forEach((element, index) => {
-//     element.style.transitionDelay = `${index * 0.1}s`
+// // Create a new IntersectionObserver with a callback function and threshold option
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         // Check if the element is in the viewport with the specified threshold
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('show'); // Add the 'show' class
+//         } else {
+//             entry.target.classList.remove('show'); // Remove the 'show' class
+//         }
+//     });
 // });
+
+
+// // Select all elements with the 'hidden' class
+// const hiddenElements = document.querySelectorAll('.hidden');
+
+// // Set each hidden element to be observed by the IntersectionObserver
+// hiddenElements.forEach((el) => observer.observe(el));
+
+// // const elements = document.querySelectorAll(".lang");
+// // elements.forEach((element, index) => {
+// //     element.style.transitionDelay = `${index * 0.1}s`
+// // });
