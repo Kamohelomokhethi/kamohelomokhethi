@@ -14,10 +14,10 @@ toggleBtn.onclick = function() {
 // Event listeners for showing and hiding the tooltip
 socialIcons.forEach((icon) => {
     icon.addEventListener('mouseenter', (event) => {
-
-        if(tooltip){
-        // Get the website name from the icon's ID
-        const websiteName = event.target.id;
+// Get the website name from the icon's ID
+const websiteName = event.target.id;
+        if(websiteName){
+        
         // Set the tooltip content and position it at the bottom of the mouse
         tooltip.innerText = websiteName;
         tooltip.style.display = 'block';
