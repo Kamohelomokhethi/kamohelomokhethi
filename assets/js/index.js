@@ -38,18 +38,24 @@ labels.forEach(label => {
 });
 
 
+// Create a new IntersectionObserver with a callback function
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) =>{
-        // console.log(entry)
-        if (entry.isIntersecting){
-            entry.target.classList.add('show');
-        }else{
-            entry.target.classList.remove('show')
+    entries.forEach((entry) => {
+        // Check if the element is in the viewport
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show'); // Add the 'show' class
+        } else {
+            entry.target.classList.remove('show'); // Remove the 'show' class
         }
     });
+}, {
+    threshold: 0.5 // Trigger when 50% of the element is visible (adjust as needed)
 });
 
+// Select all elements with the 'hidden' class
 const hiddenElements = document.querySelectorAll('.hidden');
+
+// Set each hidden element to be observed by the IntersectionObserver
 hiddenElements.forEach((el) => observer.observe(el));
 
 // const elements = document.querySelectorAll(".lang");
