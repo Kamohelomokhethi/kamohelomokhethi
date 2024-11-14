@@ -51,8 +51,6 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove('show'); // Remove the 'show' class
         }
     });
-}, {
-    threshold: 0.5 // Trigger callback when 50% of the element is visible
 });
 
 
