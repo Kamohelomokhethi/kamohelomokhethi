@@ -41,17 +41,20 @@ labels.forEach(label => {
 });
 
 
-// Create a new IntersectionObserver with a callback function
+// Create a new IntersectionObserver with a callback function and threshold option
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        // Check if the element is in the viewport
+        // Check if the element is in the viewport with the specified threshold
         if (entry.isIntersecting) {
             entry.target.classList.add('show'); // Add the 'show' class
         } else {
             entry.target.classList.remove('show'); // Remove the 'show' class
         }
     });
+}, {
+    threshold: 0.5 // Trigger callback when 50% of the element is visible
 });
+
 
 // Select all elements with the 'hidden' class
 const hiddenElements = document.querySelectorAll('.hidden');
